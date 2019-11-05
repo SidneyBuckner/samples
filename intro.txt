@@ -1,0 +1,7 @@
+ls - Lists the Directories (or Folders) on your computer
+cd - Change Directory. Insert the Directory Name after cd to go to the desired Folder
+cd .. - Lets you go back one previous Directory 
+pwd - Stands for "Print Working Directory". Shows the full pathway location of your current directory
+mkdir - Stands for "Make Directory" Insert desiered Directory name after mkdir to create a new folder
+touch - Makes a new file in a desired directory. Insert desired file name after touch to create a new file 
+

@@ -1,0 +1,25 @@
+{
+  "name": "sidneybuckner",
+  "version": "1.0.0",
+  "description": "### Oct 31 - Primitive Data Types [MDN Web Docs](https://developer.mozilla.org/en-US/) [JavaScript Fundamentals](https://javascript.info/first-steps) [Intro to JavaScript - Savvy Coders](https://savvy-coders.gitbook.io/course-materials/11) [Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://www.notion.so/SavvyCoders-3a86e3eb7b204816b65cdd8dad624acb)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SidneyBuckner/samples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SidneyBuckner/samples/issues"
+  },
+  "homepage": "https://github.com/SidneyBuckner/samples#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1"
+  }
+}

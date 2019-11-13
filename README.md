@@ -560,9 +560,27 @@ console.log(threePointer(99));
 //Nothing useful comes from an expression
 
 const y = 2+3;
-const z = 2>=3;
+const z = 2 >= 3;
 //Statements stores or executes the expression in conjunction with keywords
 
 ```
 *** Note Arithmatic is LTR Associated
 *** Note Assignments is RTLAssociated
+
+### Logical Operators
+- `&&` and `||` Conditions
+  - ('and' and 'or')
+- Note for `&&`
+  - Both the left and right operands MUST BE TRUE for that expression to complete expresison
+
+-  Note for `||`
+  -Either the left or right operand must be true to complete the expression
+  -If the first operand is found true for, then then the other will never be evaluated
+```
+const x = 3;
+const y = 5;
+const z = 10;
+console.log(x , y && x < z);
+console.log(x < y || x < z);
+
+```

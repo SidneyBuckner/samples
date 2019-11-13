@@ -1,24 +1,24 @@
 {
-    "recommendations": [
-      "formulahendry.auto-rename-tag",
-      "aaron-bond.better-comments",
-      "coenraads.bracket-pair-colorizer-2",
-      "streetsidesoftware.code-spell-checker",
-      "naumovs.color-highlight",
-      "oderwat.indent-rainbow",
-      "xabikos.javascriptsnippets",
-      "sdras.night-owl",
-      "esbenp.prettier-vscode",
-      "2gua.rainbow-brackets",
-      "stkb.rewrap",
-      "ms-vsliveshare.vsliveshare",
-      "smelukov.vscode-csstree",
-      "shinnn.stylelint",
-      "dbaeumer.vscode-eslint",
-      "pkief.material-icon-theme",
-      "codezombiech.gitignore",
-      "kisstkondoros.vscode-gutter-preview",
-      "plievone.vscode-template-literal-editor",
-      "tyriar.sort-lines"
-    ]
-  }
+  "recommendations": [
+    "2gua.rainbow-brackets",
+    "aaron-bond.better-comments",
+    "codezombiech.gitignore",
+    "coenraads.bracket-pair-colorizer-2",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-rename-tag",
+    "kisstkondoros.vscode-gutter-preview",
+    "ms-vsliveshare.vsliveshare",
+    "naumovs.color-highlight",
+    "oderwat.indent-rainbow",
+    "pkief.material-icon-theme",
+    "plievone.vscode-template-literal-editor",
+    "sdras.night-owl",
+    "shinnn.stylelint",
+    "smelukov.vscode-csstree",
+    "stkb.rewrap",
+    "streetsidesoftware.code-spell-checker",
+    "tyriar.sort-lines",
+    "xabikos.javascriptsnippets"
+  ]
+}

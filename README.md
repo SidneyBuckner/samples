@@ -584,3 +584,16 @@ console.log(x , y && x < z);
 console.log(x < y || x < z);
 
 ```
+
+### If Statements
+- A Set of conditions that control the flow of the user based on the state of the application
+  - `If true/false/something -> then do this!`
+```
+Function hiOrLow(x,y){
+ if(x >y){
+  return "x is more!";
+  }
+  console.log(hiOrLow(31,52));
+};
+
+```

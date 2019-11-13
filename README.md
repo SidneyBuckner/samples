@@ -419,7 +419,125 @@ function numberSummer(startingValue = 0, endingValue = 10) {
 } //we invoke functions and can pass in arguments that 'match up' to the named parameters
 console.log(numberSummer());
 ```
+```
+//While Loops
 
+const numberSummerMachine{
+  startingNumber: 1,
+  endingNumber: 10,
+  sumDaNumber: Function(){
+  let total = 0;
+  let i = this.startingNumber
+  while(i <= this.endingNumber){
+    total += i;
+    i += 1;
+  }
+  return total;
+  }
+};
+```
+##### a method inside of an object literal with key value pairs automatically assumes that the pairs is what will be put into the parameters
+
+- Getters and Setters
+  - OOP case that calls values outside of a scope of another function, method etc.
+  - To execute a function whenever a specified property is attempted to be changed
+
+- For `Setters`
+  - It must have exactly one parameter
+  - It can have an identifier which is either a number or a string
+  - Binds an object property to a function to be called when there is an attempt to set that property
+
+- For `Getters`
+  - to allow access to a property that returns a dynamically computed value
+  - to reflect the status of an internal variable without requiring the use of explicit method calls
+  - Binds an object property to a function that will be called when that property is looked up
+  - It must have exactly zero parameters
+
+
+```
+const numberSummerMachine = {
+  "startingNumber": 0,
+  "endingNumber": 50,
+  sumDaNumbers: function (startingNumber, endingNumber) {
+let currentValue = 0;
+for(let i = this.startingNumber; i <= this.endingNumber; i += 1){
+   currentValue += i;
+    }
+return currentValue;
+}
+//Setters that allows updating of the local data
+setStartingNumber: function(num){
+  this.startingNumber = num;
+}
+};
+console.log(numberSummerMachine.sumDaNumbers());
+```
 
 ---
+
 ### Nov 12 - ForEach, Callback functions, Reduce Arrays and Forms
+
+- Functions can recieve other functions, invoking it
+  - When this occurs the function gets stacked on top of the previous version of the function
+
+```
+function doMath(x, y, mathFxn){
+    return mathFxn(x,y);
+}
+function add(x,y){
+    return x + y;
+}
+console.log(doMath(add);)
+//'doMath' is expecting a function 'add' to be passed through as a parameter
+```
+ - `Console.trace`
+   - Traces how functions are executed in the callstack
+   - "Under the hood" of JavaScript
+```
+(from the example above:)
+Trace
+    at doMath (/Users/sidneybuckner/Code/SavvyCoders/SidneyBuckner/index.js:5:11)
+    at Object.<anonymous> (/Users/sidneybuckner/Code/SavvyCoders/SidneyBuckner/index.js:20:13)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)
+    at Module.load (module.js:556:32)
+    at tryModuleLoad (module.js:499:12)
+    at Function.Module._load (module.js:491:3)
+    at Function.Module.runMain (module.js:684:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+```
+
+- CallStack
+  - when a function invokes an additional function
+  - Functions get stacked on top of eachother
+
+- Function Factory
+  - A Function that returns out and builds another function
+  - The example below uses the concept of closure
+
+```
+function initSportScorer(pts) {
+  return function(score) {
+    return score + pts;
+  };
+}
+const threePointer = initSportScorer(3);
+
+console.log(threePointer(99));
+
+//initSportsScore is the outer Function
+//initSportsScore receives pts then immediately discards its reference to pts
+//pts remains reference by the inner function (score), this is an example of CLOSURE
+
+//A variable loses reference from the original
+//function but has become 'enclose' with a reference to the inner function
+
+```
+* See below on what is happening with the function
+```/**
+ * function(score){
+ * return score + 3;
+ * }
+
+ ```

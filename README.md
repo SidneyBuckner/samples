@@ -475,7 +475,7 @@ console.log(numberSummerMachine.sumDaNumbers());
 
 ---
 
-### Nov 12 - ForEach, Callback functions, Reduce Arrays and Forms
+### Nov 12 - Functions: Under the Hood
 
 - Functions can recieve other functions, invoking it
   - When this occurs the function gets stacked on top of the previous version of the function
@@ -526,12 +526,12 @@ const threePointer = initSportScorer(3);
 
 console.log(threePointer(99));
 
-//initSportsScore is the outer Function
-//initSportsScore receives pts then immediately discards its reference to pts
-//pts remains reference by the inner function (score), this is an example of CLOSURE
+*initSportsScore is the outer Function
+*initSportsScore receives pts then immediately discards its reference to pts
+*pts remains reference by the inner function (score), this is an example of CLOSURE
 
-//A variable loses reference from the original
-//function but has become 'enclose' with a reference to the inner function
+*A variable loses reference from the original
+*function but has become 'enclose' with a reference to the inner function
 
 ```
 * See below on what is happening with the function

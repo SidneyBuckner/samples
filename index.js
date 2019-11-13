@@ -1,37 +1,61 @@
-// // doMath is expecting to recieve a function
-// function doMath(x, y, operation) {
-//   // Name doesnt matter as long as the operation matches with parameter passed in at the console
-//   // The function will recieve x and y
-//   console.trace();
+// // // doMath is expecting to recieve a function
+// // function doMath(x, y, operation) {
+// //   // Name doesnt matter as long as the operation matches with parameter passed in at the console
+// //   // The function will recieve x and y
+// //   console.trace();
 
-//   return operation(x, y);
+// //   return operation(x, y);
+// // }
+// // function add(x, y) {
+// //   console.trace();
+
+// //   return x + y;
+// // }
+
+// // function subtract(x, y) {
+// //   console.trace();
+
+// //   return x - y;
+// // }
+// // console.log(doMath(10, 5, add));
+// // console.log(doMath(45, 13, subtract));
+
+// function initSportScorer(pts) {
+//   return function(score) {
+//     return score + pts;
+//   };
 // }
-// function add(x, y) {
-//   console.trace();
 
-//   return x + y;
-// }
+// const threePointer = initSportScorer(3);
 
-// function subtract(x, y) {
-//   console.trace();
+// console.log(threePointer(99));
 
-//   return x - y;
-// }
-// console.log(doMath(10, 5, add));
-// console.log(doMath(45, 13, subtract));
+// /**
+//  * function(score){
+//  * return score + 3;
+//  * }
+//  */
 
-function initSportScorer(pts) {
-  return function(score) {
-    return score + pts;
-  };
+function foo() {
+  console.trace();
+  bar();
+  console.trace();
+
+  return "foo";
 }
 
-const threePointer = initSportScorer(3);
+function bar() {
+  console.trace();
+  baz();
+  console.trace();
 
-console.log(threePointer(99));
+  return "bar";
+}
 
-/**
- * function(score){
- * return score + 3;
- * }
- */
+function baz() {
+  console.trace();
+
+  return "baz";
+}
+
+console.log(foo());

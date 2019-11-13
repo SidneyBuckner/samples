@@ -499,7 +499,7 @@ console.log(doMath(add);)
    - Traces how functions are executed in the callstack
    - "Under the hood" of JavaScript
 ```
-(from the example above:)
+(from the example above when you initilize with node index.js in the terminal/gitbash:)
 Trace
     at doMath (/Users/sidneybuckner/Code/SavvyCoders/SidneyBuckner/index.js:5:11)
     at Object.<anonymous> (/Users/sidneybuckner/Code/SavvyCoders/SidneyBuckner/index.js:20:13)
@@ -516,6 +516,7 @@ Trace
 - CallStack
   - when a function invokes an additional function
   - Functions get stacked on top of eachother
+  - WHLIE THE CALL STACK IS ENGAGED, JS CANT DO ANYTHING ELSE (single threaded)
 
 - Function Factory
   - A Function that returns out and builds another function
@@ -546,3 +547,22 @@ console.log(threePointer(99));
  * }
 
  ```
+### Arguments vs. Parameters
+
+- Named parameters are in a function declaration
+`function myfunct(a,b){}`
+- Arguments are passed when the function is invoked!
+`myfunct(2,3);`
+
+### Expressions vs. Statements
+```
+2 + 3;
+//Nothing useful comes from an expression
+
+const y = 2+3;
+const z = 2>=3;
+//Statements stores or executes the expression in conjunction with keywords
+
+```
+*** Note Arithmatic is LTR Associated
+*** Note Assignments is RTLAssociated

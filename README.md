@@ -2,8 +2,13 @@
 
 [MDN Web Docs](https://developer.mozilla.org/en-US/)
 [JavaScript Fundamentals](https://javascript.info/first-steps)
+
 [Intro to JavaScript - Savvy Coders](https://savvy-coders.gitbook.io/course-materials/11)
+
 [Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://www.notion.so/SavvyCoders-3a86e3eb7b204816b65cdd8dad624acb)
+
+[GitHub - SidneyBuckner/samples: samples for savvy coders](https://github.com/SidneyBuckner/samples)
+
 
 ### Oct 31 - Primitive Data Types
 

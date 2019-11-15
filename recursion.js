@@ -15,12 +15,12 @@
 // // The if statement n === 0 is the exit condition!
 
 function myPow(num, exp) {
-  let ret = num;
+  console.log("the expoenent is: ", exp);
 
-  for (let i = 1; i <= exp; i += 1) {
-    ret += num;
+  if (exp === 0) {
+    return 1;
   }
 
-  return ret;
+  return (num *= myPow(num, exp - 1));
 }
-console.log(myPow(2, 3));
+console.log(myPow(3, 4));

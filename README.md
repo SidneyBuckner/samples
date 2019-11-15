@@ -600,7 +600,7 @@ Function hiOrLow(x,y){
 ```
 
 ---
-### Nov 14 - Recursion
+### Nov 14 - Recursion and Math Object
 
 Lets create a function where you pass in a function with a loop insdie that returns a string with the following:
 "all work and no play makes Jack and dull boy" a given number a times:
@@ -616,4 +616,40 @@ function writePsychoBook(num) {
   return paragraph;
 }
 console.log(writePsychoBook(99));
+```
+
+- Recursive Function
+  - A recursive function is a function that calls itself!
+  - we start somewhere and call the function until we cant call the funciton anymore!
+  - Thats why its important to have an exit condition or it will loop infinitely
+
+```
+function writePsychoBook(n) {
+  console.trace();
+  if (n === 0) {
+    return "I am done";
+  }
+
+  return `All work and no play makes Jack a dull boy ${writePsychoBook(n - 1)}`;
+}
+console.log(writePsychoBook(99));
+
+// The if statement n === 0 is the exit condition!
+```
+
+- Math.pow Object
+  -
+
+```
+function myPow(num, exp) {
+  let ret = num;
+
+  for (let i = 1; i <= exp; i += 1) {
+    ret += num;
+  }
+
+  return ret;
+}
+console.log(myPow(2, 3));
+
 ```

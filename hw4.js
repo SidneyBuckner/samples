@@ -4,9 +4,10 @@
 
 function initGreeting(greeting, name) {
   return function() {
-    return `${greeting} ${name}`;
+    return `${greeting} ${name}, The time is: ${time}`;
   };
 }
 const eveningGeorge = initGreeting("Good Evening", "George");
+const time = new Date(Date.now());
 
-console.log(eveningGeorge());
+console.log(eveningGeorge(`${time.getHours()}:${time.getMinutes()}`));

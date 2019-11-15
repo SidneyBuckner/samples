@@ -706,4 +706,20 @@ if I get a new tesla and Karen get a new tesla, they are two copies for the same
 ```
 
 - Pass by Reference
-  -
+  - THE OBJECTS ITSELF CAN BE MUTATED
+  - Cant change the object name just the value!
+  - You can add new properties in the Object using dot notation and still reference the same thing!
+
+```
+// Passes by Reference
+
+const me = {
+  name: "Mark"
+};
+const me2 = me; //HERE IS WHERE BOTH VARIABLES POINT TO THE SAME VALUE!
+
+me.name = "fred";
+console.log(me);
+console.log(me2);
+
+```

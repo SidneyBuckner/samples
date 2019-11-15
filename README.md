@@ -444,6 +444,7 @@ const numberSummerMachine{
 ##### a method inside of an object literal with key value pairs automatically assumes that the pairs is what will be put into the parameters
 
 - Getters and Setters
+  - [getter - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
   - OOP case that calls values outside of a scope of another function, method etc.
   - To execute a function whenever a specified property is attempted to be changed
 
@@ -596,4 +597,23 @@ Function hiOrLow(x,y){
   console.log(hiOrLow(31,52));
 };
 
+```
+
+---
+### Nov 14 - Recursion
+
+Lets create a function where you pass in a function with a loop insdie that returns a string with the following:
+"all work and no play makes Jack and dull boy" a given number a times:
+
+```
+function writePsychoBook(num) {
+  let paragraph = "";
+
+  for (let i = 0; i <= num; i += 1) {
+    paragraph += "All work and no play makes Jack a dull boy. ";
+  }
+
+  return paragraph;
+}
+console.log(writePsychoBook(99));
 ```

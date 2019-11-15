@@ -14,13 +14,24 @@
 
 // // The if statement n === 0 is the exit condition!
 
-function myPow(num, exp) {
-  console.log("the expoenent is: ", exp);
+// function myPow(num, exp) {
+//   console.log("the expoenent is: ", exp);
 
-  if (exp === 0) {
-    return 1;
+//   if (exp === 0) {
+//     return 1;
+//   }
+
+//   return (num *= myPow(num, exp - 1));
+// }
+// console.log(myPow(3, 4));
+
+function factorial(num) {
+  let ret = 1;
+
+  for (let i = num; i >= 1; i -= 1) {
+    ret *= i;
   }
 
-  return (num *= myPow(num, exp - 1));
+  return ret;
 }
-console.log(myPow(3, 4));
+console.log(factorial(6));

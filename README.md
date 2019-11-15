@@ -600,7 +600,7 @@ Function hiOrLow(x,y){
 ```
 
 ---
-### Nov 14 - Recursion and Math Object and Factorial
+### Nov 14 - Recursion and Primitive Passes (For all Data Types)
 
 Lets create a function where you pass in a function with a loop insdie that returns a string with the following:
 "all work and no play makes Jack and dull boy" a given number a times:
@@ -689,3 +689,21 @@ function factorial(num) {
 }
 console.log(factorial(4));
 ```
+
+- Heaps
+  - vague area in memory where values hang out variable reference those values in the heap
+  - values will be removed by garbage collector if not used from heap
+
+- Pass by Value
+  - The primitive cannot be changed when reassigned
+  - Two copies of values in two different
+  - One can be reprogrammed to serve another purpose but the other will stay the same
+  - when one copy is changed the original value is thrown away and replaced
+
+```
+if I get a new tesla and Karen get a new tesla, they are two copies for the same type of tesla. If I get mine detailed and Karen doesnt, is how to describe pass by value. My Tesla's original copy is replaced by the detailed version!
+
+```
+
+- Pass by Reference
+  -

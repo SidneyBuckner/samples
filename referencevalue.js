@@ -17,3 +17,14 @@ console.log("x after  add1 is", x);
 console.log(y);
 
 // if I get a new tesla and my friend get a new tesla, they are two copies for the same type of tesla. If I get mine detailed and my friend doesnt is how to describe pass by value
+
+// Passes by Reference
+
+const me = {
+  name: "Mark"
+};
+const me2 = me; // HERE IS WHERE BOTH VARIABLES POINT TO THE SAME VALUE!
+
+me.name = "fred";
+console.log(me);
+console.log(me2);

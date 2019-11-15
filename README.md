@@ -600,7 +600,7 @@ Function hiOrLow(x,y){
 ```
 
 ---
-### Nov 14 - Recursion and Math Object
+### Nov 14 - Recursion and Math Object and Factorial
 
 Lets create a function where you pass in a function with a loop insdie that returns a string with the following:
 "all work and no play makes Jack and dull boy" a given number a times:
@@ -618,7 +618,7 @@ function writePsychoBook(num) {
 console.log(writePsychoBook(99));
 ```
 
-- Recursive Function
+- Recursive Functions
   - A recursive function is a function that calls itself!
   - we start somewhere and call the function until we cant call the funciton anymore!
   - Thats why its important to have an exit condition or it will loop infinitely
@@ -637,8 +637,7 @@ console.log(writePsychoBook(99));
 // The if statement n === 0 is the exit condition!
 ```
 
-- Math.pow Object
-  -
+- Math.pow Object Example:
 
 ```
 function myPow(num, exp) {
@@ -652,4 +651,41 @@ function myPow(num, exp) {
 }
 console.log(myPow(2, 3));
 
+//recursion version:
+
+function myPow(num, exp) {
+  console.log("the expoenent is: ", exp);
+ if (exp === 0) {
+  return 1;
+}
+  return (num *= myPow(num, exp - 1));
+}
+console.log(myPow(3, 4));
+
+```
+- Factorial Example:
+
+```
+function factorial(num) {
+  let ret = 1;
+
+  for (let i = num; i >= 1; i -= 1) {
+    ret *= i;
+  }
+
+  return ret;
+}
+console.log(factorial(6));
+
+
+//recursion version:
+
+function factorial(num) {
+  if (num === 0) {
+    return 1;
+  }
+
+  return (num *= factorial(num - 1));
+}
+console.log(factorial(4));
 ```

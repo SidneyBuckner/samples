@@ -25,13 +25,24 @@
 // }
 // console.log(myPow(3, 4));
 
-function factorial(num) {
-  let ret = 1;
+// function factorial(num) {
+//   if (num === 0) {
+//     return 1;
+//   }
 
-  for (let i = num; i >= 1; i -= 1) {
-    ret *= i;
+//   for (let i = num; i >= 1; i -= 1) {
+//     ret *= i;
+//   }
+
+//   return ret;
+// }
+// console.log(factorial(6));
+
+function factorial(num) {
+  if (num === 0) {
+    return 1;
   }
 
-  return ret;
+  return (num *= factorial(num - 1));
 }
-console.log(factorial(6));
+console.log(factorial(4));

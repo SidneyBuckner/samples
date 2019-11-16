@@ -723,3 +723,34 @@ console.log(me);
 console.log(me2);
 
 ```
+
+### FizzBuzz
+- If we pass a number thats divisible by both 3 and 5, log "Fizzbuzz"
+  - If this is only divisible by 3, log "Fizz"
+  - If this is only divisible by 5, log "Buzz"
+
+I wont tell you the solution, yet!
+---
+### Nov 15 - Arrays ar Objects!
+
+- Collections of name/value pairs
+  - Autoincremented numerical keys (We dont name the keys!)
+    - aka index starting with 0!
+  - Arrays and Objects are collections!
+  - Dont confuse the braces object use with brackets that arrays use!
+
+- Collections
+  - Composite data types
+```
+//This is an object!
+const myObject {
+  name: "Sidney",
+  age: 26}
+ myObject["pronuns"] = "she/her";
+
+//This is an array!
+const myArray [];
+myArr[0] = "Hello"
+
+```
+

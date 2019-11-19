@@ -1,4 +1,4 @@
-# JavaScript
+# ES6 JavaScript
 
 [MDN Web Docs](https://developer.mozilla.org/en-US/)
 [JavaScript Fundamentals](https://javascript.info/first-steps)
@@ -14,7 +14,7 @@
 
 - Strings
   - "dowpinrkg", "Sidney", "Meatloaf"
-  - Identifies a set of characters
+  - Identifies a set of characters in between quotations
 
 - Undefined
   - Nothing, told it to be nothing at all
@@ -541,6 +541,16 @@ console.log(threePointer(99));
 *function but has become 'enclose' with a reference to the inner function
 
 ```
+- A good rule of thumb to start function factories would be to start with the skeleton and fill in the correct values from there:
+
+```
+function name(parameters){
+  return function(){
+
+  }
+}
+```
+
 * See below on what is happening with the function
 ```/**
  * function(score){
@@ -726,8 +736,9 @@ console.log(me2);
 
 ### FizzBuzz
 - If we pass a number thats divisible by both 3 and 5, log "Fizzbuzz"
-  - If this is only divisible by 3, log "Fizz"
-  - If this is only divisible by 5, log "Buzz"
+  - If the number is only divisible by 3, log "Fizz"
+  - If the number is only divisible by 5, log "Buzz"
+  - if the number is divisible by neither, log the number
 
 I wont tell you the solution, yet!
 ---
@@ -754,3 +765,114 @@ myArr[0] = "Hello"
 
 ```
 
+### Loops over Arrays
+
+- Lets make a loop for the array and return all of the Names that start with 'M'!
+
+```
+const myArr = [
+  "Andrew",
+  "Billy",
+  "George",
+  "Heather",
+  "Madison",
+  "Marque",
+  "Martin",
+  "Nikki",
+  "Oscar",
+  "RhondaLyn",
+  "Sidney",
+  "Tracie",
+  "Wallat"
+];
+
+function nameMs(myArr) {
+  const mNames = [];
+
+  for (let i = 0; i < myArr.length; i += 1) {
+    if (myArr[i].startsWith("M")) {
+      mNames.push(myArr[i]);
+    }
+  }
+
+  return mNames;
+}
+```
+
+
+### Nov 18 - Truthyness and falsey-ness
+
+- Unary Operator (!) and Binary Operators (&&)
+
+- `!` or Bang
+  - shorthand for "not"
+  - !true or !false
+
+- What do empty objects or null bring back? Are they Truth-y or false-y???
+  - Any value at all is true! An empty object is still something An empty array is stil true!
+
+```
+console.log(0); // False
+console.log(!0); // True
+
+console.log(2); // True
+console.log(!2); // False
+
+// `!` and indicates you either have something or nothing as log as its a primitive. Any number apart from 0 is True. An expty string is false.
+
+//Any value at all is true! An empty object is still something An empty array is stil true!
+
+//It was true but not anymore. It was false but not anymore!
+
+```
+
+### Function Factories and Function Constructors
+
+- When the Keyword 'this' works, and when it doesnt:
+  - A Couple Notes for the example function factory below (note you shouldnt be doing OOP with the example below):
+
+
+```
+const groceries = "I am a grocery list!";
+
+function initObj(potatoes, cereal, anotherFruit) {
+  return {
+    potatoes,
+    cereal,
+    fruit: anotherFruit,
+    getChecklist: () =>
+      `Im going to the grocery store and really need ${this.cereal}`,
+    anotherChecklist: function() {
+      return `oh dear! I forgot to also get ${this.potatoes}`;
+    },
+    oneMoreChecklist: () =>
+      `Last but not least, I need to pick up one ${fruit};`
+  };
+}
+const myList = initObj("redskins", "froot loops", "bananas");
+
+console.log(myList);
+console.log(myList.getChecklist());
+console.log(myList.anotherChecklist());
+
+What gets logged is below:
+
+// { potatoes: 'redskins',
+//   cereal: 'froot loops',
+//   fruit: 'bananas',
+//   getChecklist: [Function: getChecklist],
+//   anotherChecklist: [Function: anotherChecklist],
+//   oneMoreChecklist: [Function: oneMoreChecklist] }
+// Im going to the grocery store and really need undefined
+// oh dear! I forgot to also get redskins
+```
+  - Arrow Functions do not know how to use the Keyword 'this'!!! The Template Literal returns "Undefined" (eg. getChcklist) 'This' looks globally for the object!
+- The function Declaration in ES6 will pick up the object using the Keyword 'this' ( eg. anotherChecklist)
+- Just dont do the the third (eg. oneMoreChecklist)
+
+### Object Oriented Programming
+
+- Modeling what you need based on Real World Objects
+  - You will
+
+### Function Constructors

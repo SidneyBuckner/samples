@@ -872,7 +872,16 @@ What gets logged is below:
 
 ### Object Oriented Programming
 
+[Dropbox - oop.pdf - Simplify your life](https://www.dropbox.com/s/7debpzansdfo1uk/oop.pdf?dl=0)
+
 - Modeling what you need based on Real World Objects
   - You will
 
 ### Function Constructors
+- The constructor property returns a reference to the Object constructor function that created the instance object.
+  - Encapsulates a propery/method
+  - Each instand of invoking the keyword 'new' is able to execute those methods and keeps the version of those properties
+  - Methods are duplicated for each and every object build by a constructor
+
+- We can instantiate variables with const and let
+- We can create instances of an object with the keyword 'new'

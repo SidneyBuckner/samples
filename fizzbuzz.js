@@ -1,18 +1,23 @@
-function fiizzBuzz(num) {
-  for (let i = 0; i <= 99; i += 1) {
-    if (i % 15 === 0) {
-      console.log("Fizzbuzz!");
-    } else if (i % 5 === 0) {
-      console.log("buzz");
-    } else if (i % 3 === 0) {
-      console.log("fizz");
-    } else {
-      console.log(i);
+function initFizzBuzz(num1, num2) {
+  return function fizzBuzz46() {
+    for (let i = 0; i <= 200; i += 1) {
+      if (i % (num1 * num2) === 0) {
+        console.log("FIZZBUZZ!");
+      } else if (i % num1 === 0) {
+        console.log("Fizz!");
+      } else if (i % num2 === 0) {
+        console.log("Buzz!");
+      } else {
+        console.log(i);
+      }
     }
-  }
 
-  return fiizzBuzz(42);
+    return initFizzBuzz();
+  };
 }
+const fizzBuzz46 = initFizzBuzz(4, 6);
+
+fizzBuzz46();
 // Write FizzBuzz
 // Post different Solutions for Recursion in Slack
 // /Write analogies for Pass by reference an pass by values

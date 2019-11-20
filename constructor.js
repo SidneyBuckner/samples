@@ -9,6 +9,14 @@ function Profile(first, last, age, occ) {
     return "Just kidding, Cali wine is the best.";
   };
 
+  this.setHobby = function(hobby) {
+    if (hobby) {
+      this.hobby = hobby;
+    } else {
+      console.error("HOBBY NOT FOUND!!!");
+    }
+  };
+
   this.getBio = function() {
     return `hi, my name is ${this.getFullName()}. I am ${
       this.age
@@ -20,6 +28,8 @@ function Profile(first, last, age, occ) {
 }
 const me = new Profile("Sidney", "Buckner", 26, "Software Engineer");
 
-console.log(me);
-console.log(me.getBio());
 console.log(me.getFullName());
+console.log(me.getBio());
+
+me.setHobby("Arts and Crafts!");
+console.log(me);

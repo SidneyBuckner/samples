@@ -1,8 +1,5 @@
-function profile(first, last, age, occ) {
-  (this.first = "Sidney"),
-    (this.last = "Buckner"),
-    (this.age = 26),
-    (this.occ = "Software Engineer");
+function Profile(first, last, age, occ) {
+  (this.first = first), (this.last = last), (this.age = age), (this.occ = occ);
 
   this.canDrink = function() {
     if (this.age < 21) {
@@ -17,5 +14,12 @@ function profile(first, last, age, occ) {
       this.age
     } years old. ${this.canDrink()}`;
   };
-  this.getFullName;
+  this.getFullName = function() {
+    return `${this.first} ${this.last}`;
+  };
 }
+const me = new Profile("Sidney", "Buckner", 26, "Software Engineer");
+
+console.log(me);
+console.log(me.getBio());
+console.log(me.getFullName());

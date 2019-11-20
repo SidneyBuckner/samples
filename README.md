@@ -275,7 +275,7 @@ me.homework.hw2 = 'passed';
  // Using a sequence of five statements the program is explicitly told how to add the numbers 5, 10 and 15 together
 ```
 ---
-### Nov 7 - Object Oriented Programming
+### Nov 7 - Inheritance
 
 - A type of software design where the codebase is organized around objects and classes
   - Objects contain the functions and central logic of a program
@@ -441,7 +441,7 @@ const numberSummerMachine{
   }
 };
 ```
-##### a method inside of an object literal with key value pairs automatically assumes that the pairs is what will be put into the parameters
+##### A method inside of an object literal with key value pairs automatically assumes that the pairs is what will be put into the parameters
 
 - Getters and Setters
   - [getter - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
@@ -798,7 +798,7 @@ function nameMs(myArr) {
   return mNames;
 }
 ```
-
+---
 
 ### Nov 18 - Truthyness and falsey-ness
 
@@ -872,16 +872,58 @@ What gets logged is below:
 
 ### Object Oriented Programming
 
-[Dropbox - oop.pdf - Simplify your life](https://www.dropbox.com/s/7debpzansdfo1uk/oop.pdf?dl=0)
-
+[OOP JavaScript Concepts](https://www.dropbox.com/s/7debpzansdfo1uk/oop.pdf?dl=0)
+- JavaScript is Prototype based OOP
+  - [Classes - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- Other OOP languages use classes (Class based OOP)
 - Modeling what you need based on Real World Objects
-  - You will
+  - Referencing alagories, objects, people, things etc.
 
 ### Function Constructors
 - The constructor property returns a reference to the Object constructor function that created the instance object.
   - Encapsulates a propery/method
   - Each instand of invoking the keyword 'new' is able to execute those methods and keeps the version of those properties
   - Methods are duplicated for each and every object build by a constructor
+  - If you want to return an object, use a constructor
+  - If you want to return a function, use a function factory
 
 - We can instantiate variables with const and let
+  -  Instantiation patterns are ways to create something in JavaScript
 - We can create instances of an object with the keyword 'new'
+
+```
+function Profile(first, last, age, occ) {
+  (this.first = first), (this.last = last), (this.age = age), (this.occ = occ);
+
+  this.canDrink = function() {
+    if (this.age < 21) {
+      return "My favorite wine is French. French wine is the best wine.";
+    }
+
+    return "Just kidding, Cali wine is the best.";
+  };
+
+  this.getBio = function() {
+    return `hi, my name is ${this.getFullName()}. I am ${
+      this.age
+    } years old. ${this.canDrink()}`;
+  };
+  this.getFullName = function() {
+    return `${this.first} ${this.last}`;
+  };
+}
+const me = new Profile("Sidney", "Buckner", 26, "Software Engineer");
+
+console.log(me);
+console.log(me.getBio());
+console.log(me.getFullName());
+
+//Create a class or  obejct constructor
+```
+Extra Resources:
+[11-19-1-vimeo on Vimeo](https://vimeo.com/374184792/29b651bc7f)
+[11-19-2-vimeo on Vimeo](https://vimeo.com/374179922/1fc833c854)
+[fxn-constructors on Vimeo](https://vimeo.com/374209290/bac71d25dd)
+
+---
+### Nov 20 -

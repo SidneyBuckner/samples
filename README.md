@@ -449,6 +449,7 @@ const numberSummerMachine{
   - To execute a function whenever a specified property is attempted to be changed
 
 - For `Setters`
+  - Provides protective access to changing or manipulation of new properties
   - It must have exactly one parameter
   - It can have an identifier which is either a number or a string
   - Binds an object property to a function to be called when there is an attempt to set that property
@@ -889,7 +890,7 @@ What gets logged is below:
 
 - We can instantiate variables with const and let
   -  Instantiation patterns are ways to create something in JavaScript
-- We can create instances of an object with the keyword 'new'
+- We can create a new instance of an object with the keyword 'new'
 
 ```
 function Profile(first, last, age, occ) {
@@ -918,7 +919,7 @@ console.log(me);
 console.log(me.getBio());
 console.log(me.getFullName());
 
-//Create a class or  obejct constructor
+
 ```
 Extra Resources:
 [11-19-1-vimeo on Vimeo](https://vimeo.com/374184792/29b651bc7f)
@@ -926,4 +927,45 @@ Extra Resources:
 [fxn-constructors on Vimeo](https://vimeo.com/374209290/bac71d25dd)
 
 ---
-### Nov 20 -
+### Nov 19 - Getters, Setters and Error Logs
+
+```
+function Profile(first, last, age, occ) {
+  (this.first = first), (this.last = last), (this.age = age), (this.occ = occ);
+
+  this.canDrink = function() {
+    if (this.age < 21) {
+      return "My favorite wine is French. French wine is the best wine.";
+    }
+
+    return "Just kidding, Cali wine is the best.";
+  };
+
+  this.setHobby = function(hobby) {
+    if (hobby) {
+      this.hobby = hobby;
+    } else {
+      console.error("HOBBY NOT FOUND!!!");
+    }
+  };
+
+  this.getBio = function() {
+    return `hi, my name is ${this.getFullName()}. I am ${
+      this.age
+    } years old. ${this.canDrink()}`;
+  };
+  this.getFullName = function() {
+    return `${this.first} ${this.last}`;
+  };
+}
+const me = new Profile("Sidney", "Buckner", 26, "Software Engineer");
+
+console.log(me.getFullName());
+console.log(me.getBio());
+
+me.setHobby("Arts and Crafts!");
+console.log(me);
+
+```
+### Prototyping and Functional Programming
+

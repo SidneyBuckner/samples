@@ -1070,7 +1070,7 @@ delivery.mealList();
 
 ---
 
-### Nov 21 - Key Functions/Methods
+### Nov 21 - Array Concepts, Inheritance, Polymorphism
 
 ### The Method Pop();
 
@@ -1096,6 +1096,66 @@ for (let i = 0; i < numbersAndStrings.length; i += 1) {
 const popped = numbersAndStrings.pop();
 
 console.log(popped);
+
+
+```
+
+### Inheritance and Polyomrphism
+- [Inheritance in JavaScript - Learn web development \| MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance)
+```
+// Heres my constructor - If I want to create a new Constructor called Foo I also want to have a new and a price also
+
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+// when I make an instance of food its going to have name and price
+// This special method call(),  product is called and passed along, inherits the ability/traits through parents
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = "food";
+}
+// heres the instance below
+
+const wunch = new Food("pizza", "6.00");
+
+console.log(wunch.price);
+
+```
+
+### The `Class` Keyword
+[Classes - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+- Can be used to implement function constructor prototypes
+  - Not the same as the class based OOP like in Java
+  - The class keyword uses Prototype-based OOP
+
+- With the Constructor method:
+  - The constructor method is a special method for creating and initializing an object created with a class
+  - There can only be one special method with the name "constructor" in a class
+  - A SyntaxError will be thrown if the class contains more than one occurrence of a constructor method (so dont put more than one `constructor()` in your class, please!)
+
+```
+class Person {
+  constructor(first, last, age, occ) {
+    this.first = first;
+    this.last = last;
+    this, (age = age);
+    this.occ = occ;
+  }
+
+  get bio() {
+    return `Hi, my name is ${this.fullName}. I am ${this.age}, and I am a ${this.occ}`;
+  }
+
+  get fullName() {
+    return `${this.first} ${this.last}`;
+  }
+}
+const me = new Person("John", "Smith", 35, "Gamer");
+
+console.log(me.bio);
 
 
 ```

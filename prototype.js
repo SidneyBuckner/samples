@@ -24,6 +24,15 @@ function Profile(first, last, age, occ) {
       this.age
     } years old. ${this.canDrink()}`;
   };
+
+  function Employee(first, last, age, occ, employId) {
+    Person.call(this, first, last, age, occ);
+    this.employId = employId;
+  }
+
+  //create an instance of the blueprint constructor
+  const emp = new Employee("Tony", 34, "Gamer", "419760");
+
 }
 const me = new Profile("Sidney", "Buckner", 26, "Software Engineer");
 const cara = new Profile("Cara", "Grimaldi," 28, "Doctor");

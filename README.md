@@ -80,7 +80,7 @@ let js = "javascript";
   - `thisIsCamelCase`
 
 
-- Object Oriented Programming
+- Objects
   - References everything as an object. Tangible with qualities
   - Constructed with Keys and Values in pairs
   - Think of it as a bigger box than a `const` and `let`
@@ -917,6 +917,9 @@ function Profile(first, last, age, occ) {
     return `${this.first} ${this.last}`;
   };
 }
+
+//the instance is below, you can tell be cuase it uses the keyword 'new'!
+
 const me = new Profile("Sidney", "Buckner", 26, "Software Engineer");
 
 console.log(me);
@@ -932,6 +935,25 @@ Extra Resources:
 
 ---
 ### Nov 19 - Getters, Setters Error Logs and Arrays
+
+- Getters and Setters
+  - [getter - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
+  - [setter - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
+  - OOP case that calls values outside of a scope of another function, method etc.
+  - To execute a function whenever a specified property is attempted to be changed
+
+- For `Setters`
+  - Provides protective access to changing or manipulation of new properties
+  - It must have exactly one parameter
+  - It can have an identifier which is either a number or a string
+  - Binds an object property to a function to be called when there is an attempt to set that property
+
+- For `Getters`
+  - to allow access to a property that returns a dynamically computed value
+  - to reflect the status of an internal variable without requiring the use of explicit method calls
+  - Binds an object property to a function that will be called when that property is looked up
+  - It must have exactly zero parameters
+
 
 ```
 function Profile(first, last, age, occ) {
@@ -953,6 +975,7 @@ function Profile(first, last, age, occ) {
     }
   };
 
+//this is a getter below, getting data to return
   this.getBio = function() {
     return `hi, my name is ${this.getFullName()}. I am ${
       this.age
@@ -969,6 +992,10 @@ console.log(me.getBio());
 
 me.setHobby("Arts and Crafts!");
 console.log(me);
+
+```
+
+```
 
 ```
 ### Prototyping and Functional Programming
@@ -1008,6 +1035,35 @@ me.whatIsName();
 me.addHobbies(hobbies[0]);
 console.log(me);
 
+```
+***Here is Constructor with a setter below:***
+
+```
+//Conctructor
+function Meals(bfast, lunch, dinner){
+  this.bfast = bfast,
+  this.lunch = lunch,
+  this.dinner = lunch;
+}
+
+//Here is the setter below
+Meals.prototype.setFood(foodArr){
+  this.food = foodArr;
+}
+
+const delivery = new Meals("pancakes", "salad", "Tater Tots");
+//Array
+let junkFood = [ "chips", "guac", "salsa", "popcorn", "pizza", "scrambled eggs", "waffles", "apple", "burrito", "banana", "pudding"];
+
+//Now we set the array?
+delivery.setFood(junkFood);
+
+Meals.prototype.mealList(){
+  for(i = 0; i >= this.foodlength; i+=1){
+    console.log(this.food[i]);
+  }
+}
+delivery.mealList();
 ```
 
 ### Arrays with Prototyping

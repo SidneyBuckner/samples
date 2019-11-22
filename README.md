@@ -577,11 +577,12 @@ const z = 2 >= 3;
 
 ```
 *** Note Arithmatic is LTR Associated
-*** Note Assignments is RTLAssociated
+*** Note Assignments is RTL Associated
 
 ### Logical Operators
 - `&&` and `||` Conditions
   - ('and' and 'or')
+
 - Note for `&&`
   - Both the left and right operands MUST BE TRUE for that expression to complete expresison
 
@@ -747,12 +748,11 @@ I wont tell you the solution, yet!
 
 - Collections of name/value pairs
   - Autoincremented numerical keys (We dont name the keys!)
-    - aka index starting with 0!
+    - Aka index starting with 0!
   - Arrays and Objects are collections!
   - Dont confuse the braces object use with brackets that arrays use!
 
-- Collections
-  - Composite data types
+- Collections are Composite data types
 ```
 //This is an object!
 const myObject {
@@ -801,7 +801,7 @@ function nameMs(myArr) {
 ```
 ---
 
-### Nov 18 - Truthyness and falsey-ness
+### Nov 18 - Truthiness and falseyness
 
 - Unary Operator (!) and Binary Operators (&&)
 
@@ -828,6 +828,7 @@ console.log(!2); // False
 ```
 
 ### Function Factories and Function Constructors
+- Constructors are a blueprint object (skeleton object to be run at a later time!)
 
 - When the Keyword 'this' works, and when it doesnt:
   - A Couple Notes for the example function factory below (note you shouldnt be doing OOP with the example below):
@@ -872,18 +873,21 @@ What gets logged is below:
 - Just dont do the the third (eg. oneMoreChecklist)
 
 ### Object Oriented Programming
+- Other OOP languages use classes (Class based OOP)
+  - Modeling what you need based on Real World Objects
+  - Referencing alagories, objects, people, things etc.
 
+#### Classes
+[LC 101 - 18.1. What Are Classes? ](https://education.launchcode.org/intro-to-professional-web-dev/chapters/classes/introduction.html)
 [OOP JavaScript Concepts](https://www.dropbox.com/s/7debpzansdfo1uk/oop.pdf?dl=0)
 - JavaScript is Prototype based OOP
   - [Classes - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-- Other OOP languages use classes (Class based OOP)
-- Modeling what you need based on Real World Objects
-  - Referencing alagories, objects, people, things etc.
 
 ### Function Constructors
 - The constructor property returns a reference to the Object constructor function that created the instance object.
-  - Encapsulates a propery/method
-  - Each instand of invoking the keyword 'new' is able to execute those methods and keeps the version of those properties
+  - Doesn't return or invoke anything and is referenced by a capital letter in the constructor's name
+  - A Constructor is invoked with an instance using the keyword 'new'
+  - The instances execute those methods and keeps the version of those properties
   - Methods are duplicated for each and every object build by a constructor
   - If you want to return an object, use a constructor
   - If you want to return a function, use a function factory
@@ -927,7 +931,7 @@ Extra Resources:
 [fxn-constructors on Vimeo](https://vimeo.com/374209290/bac71d25dd)
 
 ---
-### Nov 19 - Getters, Setters and Error Logs
+### Nov 19 - Getters, Setters Error Logs and Arrays
 
 ```
 function Profile(first, last, age, occ) {
@@ -969,3 +973,67 @@ console.log(me);
 ```
 ### Prototyping and Functional Programming
 
+- Objects in JavaScript have an internal property known as prototype
+  - Its a reference to another object and contains common attributes/properties across all instances of the object
+- Creating a Prototype function outside of the object!
+  -  That helps the instance instances maintain their nuique properties
+
+***The instances no longer carry around their own copy of the method. theyre managed by the prototype***
+
+
+```
+// constructor function
+function Person(name, age, job) {
+  (this.name = name), (this.age = age), (this.job = job);
+}
+
+//Lets Create a Prototype function outside of the object that helps the instance instances maintain their unique properties!
+Person.prototype.whatIsName(){
+  if (typeof this.name === "string") {
+    return this.name;
+  }
+  return "PLEASE ENTER A NAME!!!"
+}
+
+Person.prototype.hobbies(arr){
+  this.hobbies = arr;
+}
+
+const hobbies = ["coding", "marching band", "video games"];
+
+//create an instance of the blueprint constructor
+const me = new Person("Sidney", 26, "Engineer")
+console.log(me);
+me.whatIsName();
+me.addHobbies(hobbies[0]);
+console.log(me);
+
+```
+
+### Arrays with Prototyping
+
+[Array.prototype.find() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+
+### The Method `pop()`
+
+- The `pop` method takes away one index from the bottom of the array.
+
+```
+const numbersAndStrings = [
+  12,
+  "Sid",
+  35,
+  61,
+  "Person",
+  90,
+  "front",
+  "dev",
+  1440,
+  "back"
+];
+
+for (let i = 0; i < numbersAndStrings.length; i += 1) {
+  console.log(numbersAndStrings[i]);
+}
+
+```

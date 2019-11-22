@@ -1136,6 +1136,8 @@ console.log(wunch.price);
   - There can only be one special method with the name "constructor" in a class
   - A SyntaxError will be thrown if the class contains more than one occurrence of a constructor method (so dont put more than one `constructor()` in your class, please!)
 
+***This is an example of a class with a getter***
+
 ```
 class Person {
   constructor(first, last, age, occ) {
@@ -1144,6 +1146,8 @@ class Person {
     this, (age = age);
     this.occ = occ;
   }
+
+//see the getters below
 
   get bio() {
     return `Hi, my name is ${this.fullName}. I am ${this.age}, and I am a ${this.occ}`;
@@ -1155,6 +1159,43 @@ class Person {
 }
 const me = new Person("John", "Smith", 35, "Gamer");
 
+console.log(me.bio);
+
+
+```
+
+***This is an example of a class with a setter***
+
+```
+class Person {
+  constructor(first, last, age, occ) {
+    this.first = first;
+    this.last = last;
+    this.age = age;
+    this.occ = occ;
+  }
+
+  get bio() {
+    return `Hi, my name is ${this.fullName}. I am ${this.age}, and I am a ${this.occ}`;
+  }
+
+  get fullName() {
+    return `${this.first} ${this.last}`;
+  }
+
+// Setter is set the same way as a getter
+  //The name of the setter MUST BE DIFFERENT from the name of the property!!!
+
+  set activity(hobby) {
+    this.hobby = this.hobby;
+  }
+}
+const me = new Person("John", "Smith", 35, "Gamer");
+
+//We'll invoke the setter with a snytac that is similar to changing property
+
+console.log(me.bio);
+console.log((me.hobby = "reading listerature"));
 console.log(me.bio);
 
 

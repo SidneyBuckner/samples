@@ -1035,5 +1035,9 @@ const numbersAndStrings = [
 for (let i = 0; i < numbersAndStrings.length; i += 1) {
   console.log(numbersAndStrings[i]);
 }
+const popped = numbersAndStrings.pop();
+
+console.log(popped);
+
 
 ```

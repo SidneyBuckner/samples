@@ -934,6 +934,7 @@ Extra Resources:
 [fxn-constructors on Vimeo](https://vimeo.com/374209290/bac71d25dd)
 
 ---
+
 ### Nov 19 - Getters, Setters Error Logs and Arrays
 
 - Getters and Setters
@@ -995,9 +996,6 @@ console.log(me);
 
 ```
 
-```
-
-```
 ### Prototyping and Functional Programming
 
 - Objects in JavaScript have an internal property known as prototype
@@ -1070,7 +1068,11 @@ delivery.mealList();
 
 [Array.prototype.find() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
-### The Method `pop()`
+---
+
+### Nov 21 - Key Functions/Methods
+
+### The Method Pop();
 
 - The `pop` method takes away one index from the bottom of the array.
 

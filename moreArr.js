@@ -6,30 +6,26 @@ const numbersAndStrings = numbers.concat(strings);
 
 const updatednumbersAndStrings = [];
 
-numbers.forEach(function(number) {
-  console.log("the number is: ", number);
-});
-
-strings.forEach(function(string) {
-  console.log("the string is: ", string);
-});
+// numbers.forEach(function(number) {
+//   console.log("the number is: ", number);
+// });
 
 function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
   const updatedNumbersAndStrings = [];
 
-  for (let i = 0; i < arr.length; i += 1) {
-    if (typeof arr[i] === "string") {
-      updatedNumbersAndStrings.push((arr[i] += stringUpdate));
+  arr.forEach(function(el) {
+    if (typeof el === "string") {
+      updatedNumbersAndStrings.push((el += stringUpdate));
     } else {
-      updatedNumbersAndStrings.push((arr[i] += numberUpdate));
+      updatedNumbersAndStrings.push((el += numberUpdate));
     }
-  }
+  });
 
   return updatedNumbersAndStrings;
 }
 
 // console.log("numbers is", numbers);
 // console.log("strings is", strings);
-// console.log(
-//   updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236)
-// );
+console.log(
+  updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236)
+);

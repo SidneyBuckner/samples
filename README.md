@@ -1070,38 +1070,11 @@ delivery.mealList();
 
 ---
 
-### Nov 21 - Array Concepts, Inheritance, Polymorphism
+### Nov 21 - Inheritance, Polymorphism
 
-### The Method Pop();
-
-- The `pop` method takes away one index from the bottom of the array.
-
-```
-const numbersAndStrings = [
-  12,
-  "Sid",
-  35,
-  61,
-  "Person",
-  90,
-  "front",
-  "dev",
-  1440,
-  "back"
-];
-
-for (let i = 0; i < numbersAndStrings.length; i += 1) {
-  console.log(numbersAndStrings[i]);
-}
-const popped = numbersAndStrings.pop();
-
-console.log(popped);
-
-
-```
-
-### Inheritance and Polyomrphism
 - [Inheritance in JavaScript - Learn web development \| MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance)
+- [The Secret Life of Objects :: Eloquent JavaScript](https://eloquentjavascript.net/06_object.html)
+
 ```
 // Heres my constructor - If I want to create a new Constructor called Foo I also want to have a new and a price also
 
@@ -1198,5 +1171,112 @@ console.log(me.bio);
 console.log((me.hobby = "reading listerature"));
 console.log(me.bio);
 
+```
+
+- Now we'll inherit the constructor to make another class
+-  The keyword `extends` give access to another class
+- `super` automatically sends a call for the information we need be delivered down to the new class
+- weve extended employee to be like Person
 
 ```
+class Employee extends Person() {
+  constructor(first, last, age, occ) {
+    super(first, last, age, occ);
+    this.id = empId;
+  }
+}
+
+const emp = new Employee("Robert", "Johnson", 20, "tester", "1702957");
+
+console.log(emp);
+console.log(emp.bio);
+```
+
+### Polymorphism
+When you call the String function (which converts a value to a string) on an object, it will call the toString method on that object to try to create a meaningful string from it. I mentioned that some of the standard prototypes define their own version of toString so they can create a string that contains more useful information than "[object Object]". You can also do that yourself.
+
+```
+Rabbit.prototype.toString = function() {
+  return `a ${this.type} rabbit`;
+};
+
+console.log(String(blackRabbit));
+// → a black rabbit
+```
+This is a simple instance of a powerful idea. When a piece of code is written to work with objects that have a certain interface—in this case, a toString method—any kind of object that happens to support this interface can be plugged into the code, and it will just work. This technique is called polymorphism.
+
+***Polymorphic code can work with values of different shapes, as long as they support the interface it expects.***
+---
+### Nov 25 - Class Using `Extend`
+
+- Pass all of your original Instance Values into a new constructor using the Keyword `Extend`
+  - When the first constructor is called using `Extend` from the new constructor, we bind the instance properties to the new constructor!
+  - The keyword `super` assigns the properties
+
+```
+class Person {
+  constructor(first, last, age, occ) {
+    this.first = first;
+    this.last = last;
+    this.age = age;
+    this.occ = occ;
+  }
+  get FullName() {
+    return `${this.first} ${this.last}`;
+  }
+
+  set newId(id) {
+    this.id = id;
+  }
+}
+
+const emp = new Person("Jinora", "Grimaldi", 30, "Artist");
+
+emp.id = 123;
+// console.log(emp.FullName);
+// console.log(emp);
+
+
+///Here's where the new class Employee Extends the Person Class!
+
+ class Employee extends Person {
+  constructor(first, last, age, occ) {
+    super(first, last, age, occ);
+    this.
+  }
+}
+
+const employee = new Employee("Robert", "Johnson", 20, "tester", "1702957");
+
+console.log(employee);
+
+//Employee { first: 'Robert', last: 'Johnson', age: 20, occ: 'tester' }
+
+```
+
+---
+
+- The `pop` method takes away one index from the bottom of the array.
+
+```
+const numbersAndStrings = [
+  12,
+  "Sid",
+  35,
+  61,
+  "Person",
+  90,
+  "front",
+  "dev",
+  1440,
+  "back"
+];
+
+for (let i = 0; i < numbersAndStrings.length; i += 1) {
+  console.log(numbersAndStrings[i]);
+}
+const popped = numbersAndStrings.pop();
+
+console.log(popped);
+```
+

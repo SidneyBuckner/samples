@@ -12,22 +12,22 @@ numbers.forEach(number => {
 
 // IF YOU NEED A THIS  TO REFERENCE DO NOT USE THE ARROW SYNTAX!!!
 
-// function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
-//   const updatedNumbersAndStrings = [];
+function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
+  const updatedNumbersAndStrings = [];
 
-//   arr.forEach(function(el) {
-//     if (typeof el === "string") {
-//       updatedNumbersAndStrings.push((el += stringUpdate));
-//     } else {
-//       updatedNumbersAndStrings.push((el += numberUpdate));
-//     }
-//   });
+  arr.forEach(el => {
+    if (typeof el === "string") {
+      updatedNumbersAndStrings.push((el += stringUpdate));
+    } else {
+      updatedNumbersAndStrings.push((el += numberUpdate));
+    }
+  });
 
-//   return updatedNumbersAndStrings;
-// }
+  return updatedNumbersAndStrings;
+}
 
-// // console.log("numbers is", numbers);
-// // console.log("strings is", strings);
-// console.log(
-//   updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236)
-// );
+// console.log("numbers is", numbers);
+// console.log("strings is", strings);
+console.log(
+  updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236)
+);

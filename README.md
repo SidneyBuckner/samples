@@ -1563,3 +1563,36 @@ animals.push('chickens', 'cats', 'dogs');
 console.log(animals);
 // expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
 ```
+
+### The `IndexOf()` Method
+
+[Array.prototype.indexOf() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+
+- This method returns the first index at which a given element can be found in the array, or -1 if it is not present
+
+```
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison'));
+// expected output: 1
+
+// start from index 2
+console.log(beasts.indexOf('bison', 2));
+// expected output: 4
+
+console.log(beasts.indexOf('giraffe'));
+// expected output: -1
+```
+
+### The `lastIndexOf()` Method
+[Array.prototype.lastIndexOf() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)
+- This method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex
+```
+const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+
+console.log(animals.lastIndexOf('Dodo'));
+// expected output: 3
+
+console.log(animals.lastIndexOf('Tiger'));
+// expected output: 1
+```

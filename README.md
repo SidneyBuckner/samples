@@ -5,9 +5,11 @@
 
 [Intro to JavaScript - Savvy Coders](https://savvy-coders.gitbook.io/course-materials/11)
 
-[Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://www.notion.so/SavvyCoders-3a86e3eb7b204816b65cdd8dad624acb)
+[Notion – Savvy Coders Objectives](https://www.notion.so/SavvyCoders-3a86e3eb7b204816b65cdd8dad624acb)
 
 [GitHub - SidneyBuckner/samples: samples for savvy coders](https://github.com/SidneyBuckner/samples)
+
+[Notion – Savvy Coders JavaScript Review I](https://www.notion.so/JS-Concepts-Review-I-f86fd707d60f42ccb4ab8012f3eb351e)
 
 
 ### Oct 31 - Primitive Data Types
@@ -1251,9 +1253,7 @@ const employee = new Employee("Robert", "Johnson", 20, "tester", "1702957");
 console.log(employee);
 
 //Employee { first: 'Robert', last: 'Johnson', age: 20, occ: 'tester' }
-
 ```
-
 ---
 
 - The `pop` method takes away one index from the bottom of the array.
@@ -1282,6 +1282,8 @@ console.log(popped);
 
 ---
 ### Nov 26 - Array Concepts
+
+[Array Concepts - Savvy Coders in Notion](https://www.notion.so/Arrays-Concepts-d9d7cd4fd6974e768edacc23afc5f9c6)
 - Under the hood theres a function constructor to create our own instance of an array
   - An object with number, value pairs
   - obtain the value by referring to the index of the value
@@ -1409,7 +1411,9 @@ numbers.forEach(number => {
 //the number is:  0
 ```
 
-### The `map` Function
+### The `map` Function for Arrays
+[Array.prototype.map() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
 - Map Automatically creates and array and returns an array with no mutations
   - Then also makes a copy that maniuplates
 ```
@@ -1445,3 +1449,117 @@ function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
 console.log(updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236));
 ```
 ***this function is now self-contained without looking for values outside of it's scope***
+
+### The `unshift()` method
+[Array.prototype.unshift() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
+
+- This method adds one or more elements to the beginning of an array and returns the new length of the array:
+```
+const fruits = [
+  "apple",
+  "kiwi",
+  "pineapple",
+  "jackfruit",
+  "dragonfruit",
+  "pineapple",
+  "mango",
+  "guava",
+  "strawberry"
+];
+
+const unShifted = fruits.unshift("grapes");
+
+console.log(unShifted);
+
+console.log(fruits);
+```
+### The `shift()` method
+[Array.prototype.shift() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+
+- This method removes the first element from an array and returns that removed element. This method changes the length of the array
+
+```
+const fruits = [
+  "apple",
+  "kiwi",
+  "pineapple",
+  "jackfruit",
+  "dragonfruit",
+  "pineapple",
+  "mango",
+  "guava",
+  "strawberry"
+];
+
+const unShifted = fruits.shift();
+
+console.log(unShifted);
+
+console.log(fruits);
+```
+
+### The `Pop()` Method
+[Array.prototype.pop() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+- The pop method takes away one index from the bottom of the array.
+```
+const numbersAndStrings = [
+  12,
+  "Sid",
+  35,
+  61,
+  "Person",
+  90,
+  "front",
+  "dev",
+  1440,
+  "back"
+];
+
+for (let i = 0; i < numbersAndStrings.length; i += 1) {
+  console.log(numbersAndStrings[i]);
+}
+const popped = numbersAndStrings.pop();
+
+console.log(popped);
+```
+### The `Splice()` Method
+[Array.prototype.splice() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+- This method changes the contents of an array by removing or replacing existing elements and/or adding new elements in its place
+
+```
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+
+// inserts at index 1
+
+console.log(months);
+
+// expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, 'May');
+
+// replaces 1 element at index 4
+
+console.log(months);
+
+// expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
+
+### The `Push()` Method
+[Array.prototype.push() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- This method adds one or more elements to the end of an array and returns the new length of the array
+
+```
+const animals = ['pigs', 'goats', 'sheep'];
+
+const count = animals.push('cows');
+console.log(count);
+// expected output: 4
+console.log(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push('chickens', 'cats', 'dogs');
+console.log(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```

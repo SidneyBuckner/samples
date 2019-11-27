@@ -10,7 +10,7 @@ const fruits = [
   "strawberry"
 ];
 
-const unShifted = fruits.unshift("grapes");
+const unShifted = fruits.shift();
 
 console.log(unShifted);
 

@@ -6,17 +6,27 @@ const numbersAndStrings = numbers.concat(strings);
 
 const updatednumbersAndStrings = [];
 
-const results = numbers.map(number => {
-  return number + 1;
-});
+// const results = numbers.map(number => {
+//   return number + 1;
+// });
 
-console.log(numbers);
-console.log(results);
+// console.log(numbers);
+// console.log(results);
 
 // IF YOU NEED A THIS  TO REFERENCE DO NOT USE THE ARROW SYNTAX!!!
 
-// function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
-//   const updatedNumbersAndStrings = [];
+function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
+  return arr.map(el => {
+    if (typeof el === "string") {
+      return (el += stringUpdate);
+    }
+
+    return (el += numberUpdate);
+  });
+}
+console.log(
+  updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236)
+);
 
 //   arr.forEach(el => {
 //     if (typeof el === "string") {

@@ -1356,3 +1356,92 @@ console.log(updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 2
 
 
 ### The `forEach()` loop - Callback Functions
+- A Callback function invokes another function after the first is starting to run
+  - A function "called back" by another function
+  - A forEach loop is an example of a callback function
+  - Should only go down one or two layers
+  - Not like recursion which is a funciton that calls itself!
+
+```
+//forEach() needs to know what if should do for each element
+numbers.forEach(function(number)){
+  console.log("number is", number);
+};
+
+//take number and FOR EACH number log the number!
+
+//expected result below:
+//the number is:  1
+//the number is:  2
+//the number is:  3
+//the number is:  4
+//the number is:  5
+//the number is:  6
+//the number is:  7
+//the number is:  8
+//the number is:  9
+//the number is:  0
+```
+
+***In the entire forEach, were only passing one argument***
+
+- `=> `Arrow Syntax
+  - only to be used when you don's have the keyword `This` in use!!!
+  - to replace a function!
+
+```
+numbers.forEach(number => {
+  console.log("The number is: ", number);
+});
+
+// IF YOU NEED A THIS  TO REFERENCE DO NOT USE THE ARROW SYNTAX!!!
+
+//expected result below:
+//the number is:  1
+//the number is:  2
+//the number is:  3
+//the number is:  4
+//the number is:  5
+//the number is:  6
+//the number is:  7
+//the number is:  8
+//the number is:  9
+//the number is:  0
+```
+
+### The `map` Function
+- Map Automatically creates and array and returns an array with no mutations
+  - Then also makes a copy that maniuplates
+```
+//Lets use map() to add 1 to each number
+
+const results = numbers.map(number => {
+  return number + 1;
+});
+
+console.log(numbers);
+console.log(results);
+
+//Expected result below:
+
+//[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 ]
+//[ 2, 3, 4, 5, 6, 7, 8, 9, 10, 1 ]
+
+```
+
+- Map will always create or return an array of the same length of the orginal array
+  - which means is something is missing, map will return undefined!
+  - The array always sends something back, even if the something is `undefined`
+
+```
+function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
+  return arr.map(el => {
+    if (typeof el === "string") {
+      return (el += stringUpdate);
+    }
+    return "skipped number";
+  });
+}
+console.log(updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236));
+```
+***this function is now self-contained without looking for values outside of it's scope***

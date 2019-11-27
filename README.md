@@ -1280,3 +1280,79 @@ const popped = numbersAndStrings.pop();
 console.log(popped);
 ```
 
+---
+### Nov 26 - Array Concepts
+- Under the hood theres a function constructor to create our own instance of an array
+  - An object with number, value pairs
+  - obtain the value by referring to the index of the value
+  - Indexes always start with 0
+```
+const myArr = new Array();
+myArr[0] = "hello";
+console.log(myArr instanceof Array);
+console.log(Array.isArray(myArr));
+
+```
+
+- To join two arrays without mutation you can use the method `concat()`;
+
+```
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const strings = ["string", "hello", "goodbye"];
+
+const numbersAndStrings = numbers.concat(strings);
+
+const updatednumbersAndStrings = [];
+// if the element is a string, then concatonate "Hello, I am a string" to the end
+// If it is a number add 236
+// Generate a new array  generate with these new elements
+
+for (let i = 0; i < numbersAndStrings.length; i += 1) {
+  if (typeof numbersAndStrings[i] === "string") {
+    updatednumbersAndStrings.push(
+      (numbersAndStrings[i] += " :this is a string")
+    );
+  } else {
+    updatednumbersAndStrings.push((numbersAndStrings[i] += 236));
+  }
+}
+
+// console.log("numbers is", numbers);
+// console.log("strings is", strings);
+console.log(updatednumbersAndStrings);
+```
+
+***Now let's refactor***
+
+```
+// Iterate over an ARRAY with WHILE and separate out the NUMBERS and STRINGS
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const strings = ["string", "hello", "goodbye"];
+
+const numbersAndStrings = numbers.concat(strings);
+
+const updatednumbersAndStrings = [];
+
+function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
+  const updatedNumbersAndStrings = [];
+
+  for (let i = 0; i < arr.length; i += 1) {
+    if (typeof arr[i] === "string") {
+      updatedNumbersAndStrings.push((arr[i] += stringUpdate));
+    } else {
+      updatedNumbersAndStrings.push((arr[i] += numberUpdate));
+    }
+  }
+
+  return updatedNumbersAndStrings;
+}
+
+// console.log("numbers is", numbers);
+// console.log("strings is", strings);
+console.log(updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236));
+```
+
+***The for loop isnt limited to local scope. So lets do something about that***
+
+
+### The `forEach()` loop - Callback Functions

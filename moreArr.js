@@ -5,20 +5,31 @@ const strings = ["string", "hello", "goodbye"];
 const numbersAndStrings = numbers.concat(strings);
 
 const updatednumbersAndStrings = [];
-// if the element is a string, then concatonate "Hello, I am a string" to the end
-// If it is a number add 236
-// Generate a new array  generate with these new elements
 
-for (let i = 0; i < numbersAndStrings.length; i += 1) {
-  if (typeof numbersAndStrings[i] === "string") {
-    updatednumbersAndStrings.push(
-      (numbersAndStrings[i] += " :this is a string")
-    );
-  } else {
-    updatednumbersAndStrings.push((numbersAndStrings[i] += 236));
+numbers.forEach(function(number) {
+  console.log("the number is: ", number);
+});
+
+strings.forEach(function(string) {
+  console.log("the string is: ", string);
+});
+
+function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
+  const updatedNumbersAndStrings = [];
+
+  for (let i = 0; i < arr.length; i += 1) {
+    if (typeof arr[i] === "string") {
+      updatedNumbersAndStrings.push((arr[i] += stringUpdate));
+    } else {
+      updatedNumbersAndStrings.push((arr[i] += numberUpdate));
+    }
   }
+
+  return updatedNumbersAndStrings;
 }
 
 // console.log("numbers is", numbers);
 // console.log("strings is", strings);
-console.log(updatednumbersAndStrings);
+// console.log(
+//   updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236)
+// );

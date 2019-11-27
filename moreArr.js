@@ -6,26 +6,28 @@ const numbersAndStrings = numbers.concat(strings);
 
 const updatednumbersAndStrings = [];
 
-// numbers.forEach(function(number) {
-//   console.log("the number is: ", number);
-// });
+numbers.forEach(number => {
+  console.log(number);
+});
 
-function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
-  const updatedNumbersAndStrings = [];
+// IF YOU NEED A THIS  TO REFERENCE DO NOT USE THE ARROW SYNTAX!!!
 
-  arr.forEach(function(el) {
-    if (typeof el === "string") {
-      updatedNumbersAndStrings.push((el += stringUpdate));
-    } else {
-      updatedNumbersAndStrings.push((el += numberUpdate));
-    }
-  });
+// function updatedNumbersAndStrings(arr, stringUpdate, numberUpdate) {
+//   const updatedNumbersAndStrings = [];
 
-  return updatedNumbersAndStrings;
-}
+//   arr.forEach(function(el) {
+//     if (typeof el === "string") {
+//       updatedNumbersAndStrings.push((el += stringUpdate));
+//     } else {
+//       updatedNumbersAndStrings.push((el += numberUpdate));
+//     }
+//   });
 
-// console.log("numbers is", numbers);
-// console.log("strings is", strings);
-console.log(
-  updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236)
-);
+//   return updatedNumbersAndStrings;
+// }
+
+// // console.log("numbers is", numbers);
+// // console.log("strings is", strings);
+// console.log(
+//   updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 236)
+// );

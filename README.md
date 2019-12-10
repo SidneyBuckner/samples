@@ -34,7 +34,7 @@
 - Boolean
   - Makes something True or False
 
-### Operators
+#### Operators
 
 - `%` Modulous
   - Finds the remainer of a operation
@@ -56,7 +56,7 @@
   false
   ```
 
-### Variables - A Place in Memory Allocated for a Value
+#### Variables - A Place in Memory Allocated for a Value
 
 - Expression
   - Anything that evaluates to some value
@@ -145,7 +145,7 @@ console.log('person.name');
 #### *To Establish an understanding of basic Single Page Applications with Lessons in HTML CSS JavaScript ES6 and basic functionalities in rendering and processing functionalities from the back end to the front end*
 
 
-### Shell Commands
+#### Shell Commands
 ```
 `pwd` - *Print Working Directory/folder 📁*
 `mkdir` - *Make Directory/folder 📁*
@@ -162,7 +162,7 @@ console.log('person.name');
 
 ```
 
-### Git Repo Commands
+#### Git Repo Commands
 
 ```
 `git init` - initializing your code to be ready for commiting and pushing
@@ -197,7 +197,7 @@ console.log('person.name');
 - Node
   - JavaScript that can work on the server
 
-### Template Literals
+#### Template Literals
 
 - Evaluates the expression in between the ticks!
 
@@ -206,7 +206,7 @@ const name = "Sidney";
 console.log(`Hello, my name is ${name}`);
 ```
 
-### Object Literals
+#### Object Literals
 ```
 const me = {
     'name': 'Sidney',
@@ -216,7 +216,7 @@ const me = {
 };
 console.log(me["name"]);
 ```
-### Dot Notation
+#### Dot Notation
 - DOT NOTATION indicates that console is an OBJECT.
   - EVERYTHING IN JS IS AN OBJECT EXCEPT PRIMITIVES.
   - Here, log is being INVOKED by the use of (). That means that it's a FUNCTION or METHOD.
@@ -261,7 +261,7 @@ me.homework.hw2 = 'passed';
 ```
 
 
-### Imperitive Programming
+#### Imperitive Programming
 
 - An imperative language uses a sequence of statements to determine how to reach a certain goal. These statements are said to change the state of the program as each one is executed in turn
   - In short, its writing out line by line exactly what you want to do in your code!
@@ -313,7 +313,7 @@ const MyComponent = () => {
 }
 ```
 
-### Looping - Two Types For and While
+#### Looping - Two Types For and While
 
 - `For Loops` are staged with 3 components:
   - Starting Point: somewhere to take off (normally this is `i`)
@@ -366,7 +366,7 @@ n++;
 ```
 
 
-### Looping through Objects
+#### Looping through Objects
 
 - We can iterate through all of the values in an object, much like we would do with an array
   - `for...in` loops are specifically designed to loop through the properties of an object
@@ -395,7 +395,7 @@ diet, leaves
 ```
 
 
-### More Examples:
+#### More Examples:
 
 ```// create a loop that starts at 1 and ends at 10.
 //keep track of the current count.
@@ -561,14 +561,14 @@ function name(parameters){
  * }
 
  ```
-### Arguments vs. Parameters
+#### Arguments vs. Parameters
 
 - Named parameters are in a function declaration
 `function myfunct(a,b){}`
 - Arguments are passed when the function is invoked!
 `myfunct(2,3);`
 
-### Expressions vs. Statements
+#### Expressions vs. Statements
 ```
 2 + 3;
 //Nothing useful comes from an expression
@@ -581,7 +581,7 @@ const z = 2 >= 3;
 *** Note Arithmatic is LTR Associated
 *** Note Assignments is RTL Associated
 
-### Logical Operators
+#### Logical Operators
 - `&&` and `||` Conditions
   - ('and' and 'or')
 
@@ -600,7 +600,7 @@ console.log(x < y || x < z);
 
 ```
 
-### If Statements
+#### If Statements
 - A Set of conditions that control the flow of the user based on the state of the application
   - `If true/false/something -> then do this!`
 ```
@@ -738,7 +738,7 @@ console.log(me2);
 
 ```
 
-### FizzBuzz
+#### FizzBuzz
 - If we pass a number thats divisible by both 3 and 5, log "Fizzbuzz"
   - If the number is only divisible by 3, log "Fizz"
   - If the number is only divisible by 5, log "Buzz"
@@ -768,7 +768,7 @@ myArr[0] = "Hello"
 
 ```
 
-### Loops over Arrays
+#### Loops over Arrays
 
 - Lets make a loop for the array and return all of the Names that start with 'M'!
 
@@ -829,7 +829,7 @@ console.log(!2); // False
 
 ```
 
-### Function Factories and Function Constructors
+#### Function Factories and Function Constructors
 - Constructors are a blueprint object (skeleton object to be run at a later time!)
 
 - When the Keyword 'this' works, and when it doesnt:
@@ -874,7 +874,7 @@ What gets logged is below:
 - The function Declaration in ES6 will pick up the object using the Keyword 'this' ( eg. anotherChecklist)
 - Just dont do the the third (eg. oneMoreChecklist)
 
-### Object Oriented Programming
+#### Object Oriented Programming
 - Other OOP languages use classes (Class based OOP)
   - Modeling what you need based on Real World Objects
   - Referencing alagories, objects, people, things etc.
@@ -885,7 +885,7 @@ What gets logged is below:
 - JavaScript is Prototype based OOP
   - [Classes - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
-### Function Constructors
+#### Function Constructors
 - The constructor property returns a reference to the Object constructor function that created the instance object.
   - Doesn't return or invoke anything and is referenced by a capital letter in the constructor's name
   - A Constructor is invoked with an instance using the keyword 'new'
@@ -998,7 +998,7 @@ console.log(me);
 
 ```
 
-### Prototyping and Functional Programming
+#### Prototyping and Functional Programming
 
 - Objects in JavaScript have an internal property known as prototype
   - Its a reference to another object and contains common attributes/properties across all instances of the object
@@ -1066,7 +1066,7 @@ Meals.prototype.mealList(){
 delivery.mealList();
 ```
 
-### Arrays with Prototyping
+#### Arrays with Prototyping
 
 [Array.prototype.find() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
@@ -1099,7 +1099,7 @@ console.log(wunch.price);
 
 ```
 
-### The `Class` Keyword
+#### The `Class` Keyword
 [Classes - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
 - Can be used to implement function constructor prototypes
@@ -1194,7 +1194,7 @@ console.log(emp);
 console.log(emp.bio);
 ```
 
-### Polymorphism
+#### Polymorphism
 When you call the String function (which converts a value to a string) on an object, it will call the toString method on that object to try to create a meaningful string from it. I mentioned that some of the standard prototypes define their own version of toString so they can create a string that contains more useful information than "[object Object]". You can also do that yourself.
 
 ```
@@ -1357,7 +1357,7 @@ console.log(updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 2
 ***The for loop isnt limited to local scope. So lets do something about that***
 
 
-### The `forEach()` loop - Callback Functions
+#### The `forEach()` loop - Callback Functions
 - A Callback function invokes another function after the first is starting to run
   - A function "called back" by another function
   - A forEach loop is an example of a callback function
@@ -1411,7 +1411,7 @@ numbers.forEach(number => {
 //the number is:  0
 ```
 
-### The `map` Function for Arrays
+#### The `map` Function for Arrays
 [Array.prototype.map() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 - Map Automatically creates and array and returns an array with no mutations
@@ -1450,7 +1450,7 @@ console.log(updatedNumbersAndStrings(numbersAndStrings, " : this is a string", 2
 ```
 ***this function is now self-contained without looking for values outside of it's scope***
 
-### The `unshift()` method
+#### The `unshift()` method
 [Array.prototype.unshift() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
 - This method adds one or more elements to the beginning of an array and returns the new length of the array:
@@ -1473,7 +1473,7 @@ console.log(unShifted);
 
 console.log(fruits);
 ```
-### The `shift()` method
+#### The `shift()` method
 [Array.prototype.shift() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 
 - This method removes the first element from an array and returns that removed element. This method changes the length of the array
@@ -1498,7 +1498,7 @@ console.log(unShifted);
 console.log(fruits);
 ```
 
-### The `Pop()` Method
+#### The `Pop()` Method
 [Array.prototype.pop() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 - The pop method takes away one index from the bottom of the array.
 ```
@@ -1522,7 +1522,7 @@ const popped = numbersAndStrings.pop();
 
 console.log(popped);
 ```
-### The `Splice()` Method
+#### The `Splice()` Method
 [Array.prototype.splice() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
 - This method changes the contents of an array by removing or replacing existing elements and/or adding new elements in its place
@@ -1546,7 +1546,7 @@ console.log(months);
 // expected output: Array ["Jan", "Feb", "March", "April", "May"]
 ```
 
-### The `Push()` Method
+#### The `Push()` Method
 [Array.prototype.push() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 - This method adds one or more elements to the end of an array and returns the new length of the array
 
@@ -1564,7 +1564,7 @@ console.log(animals);
 // expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
 ```
 
-### The `IndexOf()` Method
+#### The `IndexOf()` Method
 
 [Array.prototype.indexOf() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
@@ -1584,7 +1584,7 @@ console.log(beasts.indexOf('giraffe'));
 // expected output: -1
 ```
 
-### The `lastIndexOf()` Method
+#### The `lastIndexOf()` Method
 [Array.prototype.lastIndexOf() - JavaScript \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)
 - This method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex
 ```
@@ -1596,3 +1596,10 @@ console.log(animals.lastIndexOf('Dodo'));
 console.log(animals.lastIndexOf('Tiger'));
 // expected output: 1
 ```
+---
+
+### Dec 3 - Map, Filter and Reduce
+
+
+
+#### Object Prototype Methods
